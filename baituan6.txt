@@ -1,0 +1,28 @@
+Bai 1
+void reverse(char *s) {
+    // Your code goes here
+    //*(s) = 's';
+    //*(s + 1) = '\0';
+    int n=strlen(s);
+    char *fir=s, *sec=s+n-1;
+    while(fir!=s+n/2) {
+        swap(*fir, *sec);
+        fir++;
+        sec--;
+    }
+}
+Bai 2
+void rFilter(char *s) {
+    // Your code goes here
+    //*(s) = '_';
+    //*(s + 1) = '\0';
+    int n=strlen(s);
+    char *rlast=s+n-1;
+    while(*rlast!='\0') {
+        if(!(*rlast>='a'&&*rlast<='z'||*rlast>='A'&&*rlast<='Z')) {
+            *rlast='_';
+            rlast--;
+        }
+        else break;
+    }
+}
